@@ -122,9 +122,8 @@
 	* Jumping to the dataset "date_time_tutorial.dta" we see that dates are stored in
 	* string format and so we can create a date version by adding the function 'date'
 	* Date function then uses the mask of day, month and year
-//
-cd "C:\Users\Amber\Dropbox\Econ532 - Stata Diaries\00 Datasets\01 Dta Files\04 Other"
-use "date_time_tutorial", clear
+
+	use "date_time_tutorial", clear 				//This dataset is on GitHub in .dta format
 	generate bday = date(birthday, "DMY"), after(birthday)
 	
 	* This generated a numeric count in days since we used the date function and not clock
